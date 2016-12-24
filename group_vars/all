@@ -1,0 +1,59 @@
+# ---------------------------
+# EC2
+# ---------------------------
+ec2:
+  aws_access_key: AKIAJDGZ57LDQXPZ7NFA
+  aws_secret_key: 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
+  key: gocheck
+  zookeeper_instance_type: t2.micro
+  kafka_instance_type: t2.micro
+  image: ami-5ac2cd4d
+  region: us-east-1
+  kafka_security_group: kafka
+  zookeeper_security_group: zookeeper
+  kafka_instance_count: 3
+  zookeeper_instance_count: 3
+
+#----------------------------
+#  JAVA
+#----------------------------
+java_home: /usr/local/java/jdk
+jdk_archive_url: http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-x64.tar.gz
+jdk_archive_filename: jdk-8u101-linux-x64.tar.gz
+jdk_version: jdk1.8.0_101
+
+# --------------------------------------
+# Common
+# --------------------------------------
+
+# Common Location information.
+common:
+  install_base_path: /usr/local
+  soft_link_base_path: /opt
+
+#----------------------------
+#  Zookeeper
+#----------------------------
+zookeeper:
+  version: 3.4.6
+  user: zkadmin
+  group: zkadmin
+  password: 123
+  data_store: /var/zookeeper
+  logging: /opt/zookeeper_logging
+  url: https://www.apache.org/dist/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz
+
+#----------------------------
+#  Kafka
+#----------------------------
+kafka:
+  port: 9092
+  data_store: /var/kafka
+  log4j_rootlogger: INFO
+  topics: [ A, B, C, D ]
+  version: 0.10.0.1
+  user: kafkaadmin
+  group: kafkaadmin
+  password: 123
+  replication_factor: 1
+  partition_count: 8

@@ -2,8 +2,8 @@
 # EC2
 # ---------------------------
 ec2:
-  aws_access_key: AKIAJDGZ57LDQXPZ7NFA
-  aws_secret_key: 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
+  aws_access_key: 
+  aws_secret_key: 
   key: gocheck
   zookeeper_instance_type: t2.micro
   kafka_instance_type: t2.micro
